@@ -1,0 +1,30 @@
+.root {
+  background-color: #845ec2;
+  border: 2px solid black;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: 60px auto 100px;
+  padding: 1rem;
+}
+.header {
+  border: 1px solid olive;
+  background-color: #00c9a7;
+}
+.body {
+  border: 1px solid salmon;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-height: 600px;
+  overflow: scroll;
+}
+.body__todays-highlights {
+
+}
+.footer {
+  border: 1px solid blanchedalmond;
+}
+.logo {
+  aspect-ratio: 1 / 1;
+  width: 200px;
+  border: 1px solid wheat;
+}

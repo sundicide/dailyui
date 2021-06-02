@@ -5,20 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sundicide</title>
+  <link href="../global.css" rel="stylesheet">
+  <style lang="css">
+    input {
+      width: 100px;
+    }
+    .row {
+      max-width: 400px;
+      margin: 1rem;
+      display: grid;
+      grid-auto-flow: column;
+      column-gap: 1rem;
+      justify-content: space-between;
+    }
+    .row__item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-  <div>
-    <p>Card Number</p>
-    <input class="num-4" value="" required />
-    <input class="num-4" value="" required />
-    <input class="num-4" value="" required type="password" />
-    <input class="num-4" value="" required type="password" />
-    <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+  <div class="row">
+    <div>
+      <p>Card Number</p>
+      <input
+        class="w-f"
+        id="ccn"
+        type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+
+    </div>
   </div>
-  <div>
-    <input class="num-3" value="" required />
-    <input class="num-2" value="" required />
-    <input class="num-2" value="" required />
+  <div class="row">
+    <div class="row__item">
+      <span>CVC</span>
+      <input class="num-3" value="" required />
+    </div>
+    <div class="row__item">
+      <span>MM / YY</span>
+      <div class="flex flex-direction-row">
+        <input class="num-2" value="" required />
+        <input class="num-2" value="" required />
+      </div>
+    </div>
+    </p>
   </div>
   <script src="index.js"></script>
 </body>
